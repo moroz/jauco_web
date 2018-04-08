@@ -48,7 +48,10 @@ exports.config =
       allowCache: true
       options:
         includePaths: ['bower_components']
-
+    static:
+      processors: [
+        require('html-brunch-static')(processors:
+          [ require('./jadephp-brunch-static')() ]) ]
     assetsmanager:
       copyTo:
         'fonts': ['bower_components/bootstrap-sass-official/assets/fonts/bootstrap*']

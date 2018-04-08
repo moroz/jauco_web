@@ -1,0 +1,10 @@
+!!!
+html
+    head
+        title= $title
+
+    body
+        ul
+            - foreach ($this->list as $list):
+                li!= $list
+            - endforeach.

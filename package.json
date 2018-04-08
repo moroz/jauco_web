@@ -22,6 +22,9 @@
     "uglify-js-brunch": "latest"
   },
   "devDependencies": {
-    "auto-reload-brunch": "^2.7.1"
+    "auto-reload-brunch": "^2.7.1",
+    "brunch-static": "^1.2.1",
+    "html-brunch-static": "^1.4.0",
+    "jade-php": "^0.1.4"
   }
 }
