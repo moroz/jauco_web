@@ -1,20 +1,18 @@
-<?php
-
-/*
- * This file is part of the hyyan/brunch-wordpress-theme package.
- * (c) Hyyan Abo Fakher <hyyanaf@gmail.com>
- * 
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+<?php /*
+* This file is part of the hyyan/brunch-wordpress-theme package.
+* (c) Hyyan Abo Fakher <hyyanaf@gmail.com>
+* 
+* For the full copyright and license information, please view the LICENSE
+* file that was distributed with this source code.
+*/
 
 if (!defined('ABSPATH')) {
     exit('restricted access');
 }
 
 /**
- * Simple template to find out the best title 
- */
+* Simple template to find out the best title 
+*/
 if (is_day()) :
     printf(__('<span>Daily Archive</span> %s', BRUNCH_TEXTDOMAIN), get_the_date());
 elseif (is_month()) :
@@ -31,4 +29,4 @@ elseif (is_home()) :
     _e('Latest Posts', BRUNCH_TEXTDOMAIN);
 elseif (is_author()) :
     the_author();
-endif;
+endif; ?>

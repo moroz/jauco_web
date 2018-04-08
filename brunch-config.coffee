@@ -51,7 +51,14 @@ exports.config =
     static:
       processors: [
         require('html-brunch-static')(processors:
-          [ require('./jadephp-brunch-static')() ]) ]
+          [ require('./jadephp-brunch-static')(
+            fileMatch: /\.pug$/
+            fileTransform: (filename) ->
+              filename = filename.replace(/\.php\.pug$/, '.php')
+              filename = filename.replace(/\.pug$/, '.html')
+              filename = filename.replace('pug/', '../')
+              filename
+          ) ]) ]
     assetsmanager:
       copyTo:
         'fonts': ['bower_components/bootstrap-sass-official/assets/fonts/bootstrap*']

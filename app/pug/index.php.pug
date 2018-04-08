@@ -1,0 +1,30 @@
+:php
+  /*
+  * This file is part of the hyyan/brunch-wordpress-theme package.
+  * (c) Hyyan Abo Fakher <hyyanaf@gmail.com>
+  * 
+  * For the full copyright and license information, please view the LICENSE
+  * file that was distributed with this source code.
+  */
+
+  if (!defined('ABSPATH')) {
+      exit('restricted access');
+  }
+
+!= get_header()
+.primary-content
+  header
+    h1!= get_template_part('inc/templates/title')
+
+    - if (have_posts()) :
+      - while (have_posts()) : the_post();
+          article
+            != get_template_part('content', get_post_format())
+      - endwhile;
+      != brunch_paging_nav()
+    - else :
+      != get_template_part('content', 'none')
+    - endif;
+
+!= get_sidebar()
+!= get_footer()
