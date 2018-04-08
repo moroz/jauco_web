@@ -12,16 +12,23 @@
   }
 
 != get_header()
+
+.homepage-banner
+  .homepage-banner-text
+    h1 Your new favorite tapas bar.
+    h2 In the heart of Barcelona.
+
 .primary-content
   header
     h1!= get_template_part('inc/templates/title')
 
-    - if (have_posts()) :
-      - while (have_posts()) : the_post();
-          article
-            != get_template_part('content', get_post_format())
-      - endwhile;
-      != brunch_paging_nav()
+    :php
+      if (have_posts()) :
+        while (have_posts()) : the_post();
+    article
+      != get_template_part('content', get_post_format())
+    - endwhile;
+    != brunch_paging_nav()
     - else :
       != get_template_part('content', 'none')
     - endif;

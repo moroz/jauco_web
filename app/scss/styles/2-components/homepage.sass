@@ -1,0 +1,25 @@
+@import "../0-base/mixins"
+
+.homepage-banner
+  margin-top: 0
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../background.jpeg)
+  background-position: center 30%
+  background-size: cover
+  height: 500px
+  position: relative
+
+  h1, h2
+    text-align: center
+
+  h1
+    font-size: 5rem
+
+  h2
+    +font-normal
+    font-size: 4rem
+
+.homepage-banner-text
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
