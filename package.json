@@ -5,7 +5,7 @@
     "url": ""
   },
   "engines": {
-    "node": "~0.6.25 || 0.8 || 0.9"
+    "node": ">=8.0"
   },
   "scripts": {
     "postinstall": "bower install",
@@ -14,12 +14,14 @@
   },
   "dependencies": {
     "assetsmanager-brunch": "^1.8.1",
-    "auto-reload-brunch": "latest",
+    "brunch": "^2.10.12",
     "clean-css-brunch": "latest",
     "css-brunch": "latest",
     "javascript-brunch": "latest",
     "sass-brunch": "latest",
     "uglify-js-brunch": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "auto-reload-brunch": "^2.7.1",
+  }
 }
